@@ -1,0 +1,218 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@font-face {
+    font-family: gotham;
+    src: url(font/Gotham-Rounded-Light.ttf) format("truetype");
+}
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+body{
+    font-family: gotham;
+    background-color: #008388;
+}
+main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    box-shadow: var(--dark-shadow);
+    overflow: hidden;
+    border-radius: 70px;
+    position: absolute;
+    top: 330px;
+    height: 2100px;
+    width:30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tittle{
+    /* background-color: red; */
+    position: absolute;
+    top: 100px;
+    bottom: 200px;
+    height: 90px;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.tittle h2{
+    border-bottom: 20px solid white;
+    border-bottom-width: 20px;
+    font-size: 10em;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image-container{
+    height: 1500px;
+    width: 700px;
+    position: absolute;
+    top: 80px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: centers;
+    text-align: centers;
+}
+#food-name{
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    /* background-color: blue; */
+}
+.mini-circle{
+    z-index: 10px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    height: 170px;
+    width: 170px;
+    background-color: #008388;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.mini-circle .fa-quote-right {
+    font-size: 5rem;
+}
+.shadow-circle{
+    /* z-index: 99px; */
+    position: absolute;
+    left: 35px;
+    bottom: 810px;
+    background-color: #008388;
+    border-radius: 360px;
+    width: 700px;
+    height: 700px;
+}
+.image-container h4{
+    margin-top: 50px;
+    font-size: 7em;
+    letter-spacing: 30px;
+}
+.image-container img{
+    box-shadow: var(--dark-shadow);
+    position: relative;
+    z-index: 9px;
+    border-radius: 360px;
+    width: 700px;
+    height: 700px;
+    background-position: center;
+    object-fit: cover;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+#info {
+    line-height: 90px;
+    position: absolute;
+    top: 860px;
+    text-align: center;
+    font-size: 4rem;
+    width: 28vw;
+}
+.button-container{
+    height: 100px;
+    width: 10vw;
+    position: absolute;
+    bottom: 300px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.prev-btn,
+.next-btn{
+    color: #008388;
+    font-size: 4.5rem;
+    cursor: pointer;
+    border: none;
+    /* height: 50px;
+    width: 50px; */
+    /* font-size: 9rem; */
+}
+.random-btn{
+    background-color: #008388;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+    font-size: 4rem;
+    padding: 30px 100px;
+    letter-spacing: 20px;
+    border: none;
+}
+.random-btn:active{
+    background-color: #26a7ac;
+}
